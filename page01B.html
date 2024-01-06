@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Tom Lutzenberger Education Training Page</title>
+        <link rel="stylesheet" :type="text/css" href="a1_styles.css">
+        <link rel="stylesheet" :type="text/css" href="W3CSS.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <header>
+
+        </header>
+
+        <nav>
+
+            <div class="w3-bar w3-black" style="font-size:x-large;">
+                <a href="index.html" class="w3-bar-item w3-button">HOME PAGE</a>
+                <a href="page01B.html" class="w3-bar-item w3-button">EDUCATION</a>
+                <a href="page02.html" class="w3-bar-item w3-button">WORK</a>
+                <a href="page04.html" class="w3-bar-item w3-button">SERVICES</a>
+                <a href="page05.html" class="w3-bar-item w3-button">CONTACT</a>
+            </div>
+
+        </nav>
+
+        <main>
+                <div>
+                <h1>Education & Training</h1>
+                <h3></h3>
+                <h2></h2>
+                <img src="pictures/octopus01.png" height=300 width=300>
+                </div>
+
+                <div class="page01content">
+                    <br>
+                    <p class="page01content">
+                        I've been fortunate enough in life to have been able to take advantage of multiple educational
+                        opportunities, and I continue to be a lifelong learner. If I have the time, there's always
+                        something new to learn. My education is varied and cross-cutting, applying both technical training
+                        and soft-skills in the same package delivery of performance and service product. My training portfolio includes
+                        the following accomplishments:
+                    </p>
+                </div>
+
+                <div class="work-list-json">     
+                    <!-- Displaying the person's information using JavaScript -->
+                    <script>
+                        // JSON data representing a school
+                        var school = {
+                            "name1": "CSU Sacramento",
+                            "degree1": "MBA-Finance",
+                            "city1": "Sacramento",
+                            "name2": "Arizona State University",
+                            "degree2": "BA-Anthropology",
+                            "city2": "Tempe",
+                            "name3": "St. Mary's College",
+                            "degree3": "BA-English",
+                            "city3": "Moraga",
+                        };
+                    
+                        // Accessing and displaying the information
+                        document.write("<h1>" + school.name1 + "</h1>");
+                        document.write("<p>Degree: " + school.degree1 + "</p>");
+                        document.write("<p>City: " + school.city1 + "</p>");
+                        document.write("<h1>" + school.name2 + "</h1>");
+                        document.write("<p>Degree: " + school.degree2 + "</p>");
+                        document.write("<p>City: " + school.city2 + "</p>");
+                        document.write("<h1>" + school.name3 + "</h1>");
+                        document.write("<p>Degree: " + school.degree3 + "</p>");
+                        document.write("<p>City: " + school.city3 + "</p>");
+                    </script>
+                </div>
+
+                <br>
+                <center>
+                    <hr style="color:black;">
+                </center>
+
+        </main>    
+        
+
+        <footer>
+                <div>
+                    <center><p>Copyright Tom Lutzenberger, 2023.</p></center>
+                </div>
+
+                <div class="socialmediaicons">
+                    <center>
+                        <table>
+                            <tr>
+                                <td><a href="https://www.facebook.com/profile.php?id=61552998819495">
+                                    <img src="pictures/FaceBook.jpg" height="50" width="50"></a></td>
+                                <td><a href="https://www.instagram.com/tlutzenberger/">
+                                    <img src="pictures/Instagram.jpg" height="50" width="50"></a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><img src="pictures/Discord.jpg" height="50" width="50"></td>
+                                <td><img src="pictures/Twitter.jpg" height="50" width="50"></td>
+                            </tr>
+                        </table>
+
+                    </center>
+                </div>
+
+
+        </footer>
+
+    </body>
+
+</html>

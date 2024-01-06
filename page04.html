@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Tom Lutzenberger Services Page</title>
+        <link rel="stylesheet" :type="text/css" href="a1_styles.css">
+        <link rel="stylesheet" :type="text/css" href="W3CSS.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        <header>
+
+        </header>
+
+        <nav>
+
+            <div class="w3-bar w3-black" style="font-size:x-large;">
+                <a href="index.html" class="w3-bar-item w3-button">HOME PAGE</a>
+                <a href="page01B.html" class="w3-bar-item w3-button">EDUCATION</a>
+                <a href="page02.html" class="w3-bar-item w3-button">WORK</a>
+                <a href="page04.html" class="w3-bar-item w3-button">SERVICES</a>
+                <a href="page05.html" class="w3-bar-item w3-button">CONTACT</a>
+            </div>
+
+        </nav>
+
+        <main>
+
+            <div class="services-page-intro">
+                <h1>Services Available for Hire</h1>
+                <center>
+                    <hr style="color:black;">
+                </center>
+            </div>
+
+            <div>
+                <br>
+                <center>
+                <h2>WRITING & CONTENT CREATION</h2>
+                <br>
+                <table>
+                    <tr>
+                        <td><img src="pictures/services-writing3.jpg"><br><center>Technical Writing</center></td>
+                        <td><img src="pictures/services-writing4.jpg"><br><center>Content Creation</center></td>
+                        <td><img src="pictures/services-writing5.jpg"><br><center>Web Scripting</center></td>                 
+                    </tr>
+                </table>
+                </center>
+            </div>
+
+            <div>
+                <br>
+                <center>
+                <h2>GRAPHIC DESIGN</h2>
+                <table>
+                    <tr>
+                        <td><img src="pictures/services-graphics1.png" height="300" width="300"><br><center>Graphic Art & Design</center></td>
+                        <td><img src="pictures/services-graphics2.png" height="300" width="300"><br><center>Graphic Art & Design</center></td>               
+                    </tr>
+                </table>
+                </center>
+            </div>
+
+            <div>
+                <br>
+                <center>
+                <h2>PHOTOGRAPHY</h2>
+                </center>
+
+            </div>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="pictures/photo01.JPG" style="width:50%">
+                <div class="text">Caption One</div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="pictures/photo02.JPG" style="width:50%">
+                <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="pictures/photo03.JPG" style="width:50%">
+                <div class="text">Caption Three</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="pictures/photo04.JPG" style="width:50%">
+                <div class="text">Caption Four</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="pictures/photo05.JPG" style="width:50%">
+                <div class="text">Caption Five</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="pictures/photo06.JPG" style="width:50%">
+                <div class="text">Caption Six</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="pictures/photo07.JPG" style="width:50%">
+                <div class="text">Caption Seven</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="pictures/photo08.JPG" style="width:50%">
+                <div class="text">Caption Eight</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    }
+            </script>
+
+        </main>    
+        
+
+        <footer>
+                <div>
+                    <center><p>Copyright Tom Lutzenberger, 2024.</p></center>
+                </div>
+
+                <div class="socialmediaicons">
+                    <center>
+                        <table>
+                            <tr>
+                                <td><a href="https://www.facebook.com/profile.php?id=61552998819495">
+                                    <img src="pictures/FaceBook.jpg" height="50" width="50"></a></td>
+                                <td><a href="https://www.instagram.com/tlutzenberger/">
+                                    <img src="pictures/Instagram.jpg" height="50" width="50"></a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><img src="pictures/Discord.jpg" height="50" width="50"></td>
+                                <td><img src="pictures/Twitter.jpg" height="50" width="50"></td>
+                            </tr>
+                        </table>
+
+                    </center>
+                </div>
+
+
+        </footer>
+
+    </body>
+
+
+</html>

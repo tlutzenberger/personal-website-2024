@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tom Lutzenberger Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="a1_styles.css">
+    <link rel="stylesheet" type="text/css" href="W3CSS.css">
+
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <nav>
+        <div class="w3-bar w3-black" style="font-size:x-large;">
+            <a href="index.html" class="w3-bar-item w3-button">HOME PAGE</a>
+            <a href="page01B.html" class="w3-bar-item w3-button">EDUCATION</a>
+            <a href="page02.html" class="w3-bar-item w3-button">WORK</a>
+            <a href="page04.html" class="w3-bar-item w3-button">SERVICES</a>
+            <a href="page05.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="intro-section">
+        <h1>My Home Front Page</h1>
+        <center><h2>Tom Lutzenberger</h2></center>
+        <img src="pictures/me.jpg" height="500" width="500"><br><br>
+        </div>
+
+        <div class="hr-black">
+        <center><hr></center>
+        </div>
+
+        <center>
+        <h3>Welcome to my website!</h3>
+        </center>
+
+        <div class="blk-buttons">
+            <center>
+            <table>
+                <tr>
+                        <td><a href="page02.html"><img src="pictures/Blk-button-career.png" height="100" width="100" alt="DefaultImage1" id="myImage1"></a></td>
+                        <td><a href="page01B.html"><img src="pictures/Blk-button-education.png" height="100" width="100" alt="DefaultImage2" id="myImage2"></a></td>
+                    <!--<td><a href="page03.html"><img src="pictures/Blk-button-hobbies.png" height="100" width="100" alt="DefaultImage3" id="myImage3"></a></td> -->
+                        <td><a href="page04.html"><img src="pictures/Blk-button-services.png" height="100" width="100" alt="DefaultImage4" id="myImage4"></a></td>
+                        <td><a href="page05.html"><img src="pictures/Blk-button-contact.png" height="100" width="100" alt="DefaultImage5" id="myImage5"></a></td>
+                </tr>
+            </table>
+            </center>            
+        </div>
+        <br>
+
+        <div class="sitecolorfontchange">
+            <center>
+            <h4 class="sitecolorfontchange">Don't Like Bright Yellow for a Background? Change It!</h1>
+            <button onclick="changeBackgroundColor()" class="sitecolorfontchange">Change Background</button>
+            <button onclick="changeFont()" class="sitecolorfontchange">Change Font</button>
+            </center>
+        </div>
+        <div class="alert-button">
+            <p>Click the following button to see the effect:</p>        
+            <form>  
+               <center>
+                <label for="userName">Enter your name:</label>
+                <input type="text" id="userName">
+                <button id="showDialog">Show Dialog</button>
+               </center> 
+            </form>    
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div>
+            <center>
+                <p>Copyright Tom Lutzenberger, 2023.</p>
+            </center>
+        </div>
+
+        <div class="socialmediaicons">
+            <center>
+                <table>
+                    <tr>
+                        <td><a href="https://www.facebook.com/profile.php?id=61552998819495">
+                            <img src="pictures/FaceBook.jpg" height="50" width="50"></a></td>
+                        <td><a href="https://www.instagram.com/tlutzenberger/">
+                            <img src="pictures/Instagram.jpg" height="50" width="50"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img src="pictures/Discord.jpg" height="50" width="50"></td>
+                        <td><img src="pictures/Twitter.jpg" height="50" width="50"></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+
+    </footer>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Function to handle the hover effect for an image
+        function handleImageHover($image, normalImage, hoverImage) {
+            // Preload the hover image for a smoother transition
+            var hoverImagePreload = new Image();
+            hoverImagePreload.src = hoverImage;
+    
+            // Set up the hover event
+            $image.hover(
+                function () {
+                    // Mouse over, switch to the hover image
+                    $image.attr("src", hoverImage);
+                },
+                function () {
+                    // Mouse out, switch back to the normal image
+                    $image.attr("src", normalImage);
+                }
+            );
+        }
+        // Get references to the image elements and define their paths
+        var $image1 = $("#myImage1");
+        var normalImage1 = "pictures/Blk-button-career.png";
+        var hoverImage1 = "pictures/career01.png";
+    
+        var $image2 = $("#myImage2");
+        var normalImage2 = "pictures/Blk-button-education.png";
+        var hoverImage2 = "pictures/education01.png";
+    
+        var $image3 = $("#myImage3");
+        var normalImage3 = "pictures/Blk-button-hobbies.png";
+        var hoverImage3 = "pictures/hobbies01.png";
+
+        var $image4 = $("#myImage4");
+        var normalImage4 = "pictures/Blk-button-services.png";
+        var hoverImage4 = "pictures/services01.png";
+
+        var $image5 = $("#myImage5");
+        var normalImage5 = "pictures/Blk-button-contact.png";
+        var hoverImage5 = "pictures/contact01.png";
+    
+        // Apply the hover effect to each image
+        handleImageHover($image1, normalImage1, hoverImage1);
+        handleImageHover($image2, normalImage2, hoverImage2);
+        handleImageHover($image3, normalImage3, hoverImage3);
+        handleImageHover($image4, normalImage4, hoverImage4);
+        handleImageHover($image5, normalImage5, hoverImage5);
+    });
+    </script>
+
+    <script>
+    function changeBackgroundColor() {
+        const body = document.body;
+        body.style.backgroundColor = getRandomColor();
+    }
+
+    function changeFont() {
+        const body = document.body;
+        body.style.fontFamily = getRandomFont();
+    }
+
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function getRandomFont() {
+        const fonts = ["Arial, sans-serif", "Verdana, sans-serif", "Georgia, serif", "Comic Sans MS, cursive"];
+        return fonts[Math.floor(Math.random() * fonts.length)];
+    }
+    </script>
+
+    <script type = "text/javascript">
+        document.getElementById('showDialog').addEventListener('click', function() {
+            const userName = document.getElementById('userName').value;   //variable usage
+            
+            if (userName.trim() !== '') {
+                const message = `Hello, ${userName}! \n Welcome to my CS 112 Javascript website!`; // Message to display
+                                window.alert(message); // Display the dialog with the user's name
+            } else {
+                window.alert("Please enter your name.");   //Loop to capture if button clicked without name entered
+            }
+        });
+    </script>
+
+
+</html>
